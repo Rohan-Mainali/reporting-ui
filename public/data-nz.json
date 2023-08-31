@@ -1,0 +1,3231 @@
+{
+  "userSession": true,
+  "items": [
+    {
+      "title": "Good Received but not invoiced",
+      "desc": "Good Received but not invoiced",
+      "reportView": "analytics.report_goods_received_but_not_invoiced",
+      "fields": [
+        {
+          "key": "order_id",
+          "value": "Order Number",
+          "type": "text"
+        },
+        {
+          "key": "row_num",
+          "value": "Line Number",
+          "type": "text"
+        },
+        {
+          "key": "po_or_order_id",
+          "value": "Requisition Number",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Created",
+          "type": "text"
+        },
+        {
+          "key": "order_type",
+          "value": "Order Type",
+          "type": "text"
+        },
+        {
+          "key": "clinic_name",
+          "value": "Buyer Name",
+          "type": "text"
+        },
+        {
+          "key": "clinic_name",
+          "value": "Buyer Username",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "Supplier Vendor ID",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "Product Code",
+          "type": "text"
+        },
+        {
+          "key": "sp_category",
+          "value": "Category",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_subcategory",
+          "value": "Sub-Category",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_subsubcategory",
+          "value": "Sub-Sub-Category",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "formula_item_name",
+          "value": "Product Name",
+          "type": "text"
+        },
+        {
+          "key": "uom",
+          "value": "Units of Measure",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "quantity",
+          "value": "Quantity",
+          "type": "text"
+        },
+        {
+          "key": "received_qty",
+          "value": "Received Quantity",
+          "type": "text"
+        },
+        {
+          "key": "invoiced_quantity",
+          "value": "Invoiced Quantity",
+          "type": "text"
+        },
+        {
+          "key": "'AUD'",
+          "value": "Currency",
+          "type": "text"
+        },
+        {
+          "key": "formula_unit_price",
+          "value": "Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "formula_sub_total",
+          "value": "Subtotal",
+          "type": "text"
+        },
+        {
+          "key": "formula_tax",
+          "value": "Tax",
+          "type": "text"
+        },
+        {
+          "key": "total_price",
+          "value": "Total",
+          "type": "text"
+        },
+        {
+          "key": "a.practice_code",
+          "value": "Account Code",
+          "type": "text"
+        },
+        {
+          "key": "'100'",
+          "value": "Distribution Percentage",
+          "type": "text"
+        },
+        {
+          "key": "total_price",
+          "value": "Distribution Amount",
+          "type": "text"
+        },
+        {
+          "key": "formula_receiving_state",
+          "value": "Receiving State",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Items Invoiced but not received",
+      "desc": "Items Invoiced but not received",
+      "reportView": "analytics.report_items_invoiced_but_not_received",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "On Behalf Of",
+          "type": "text"
+        },
+        {
+          "key": "order_num",
+          "value": "Order Number",
+          "type": "text"
+        },
+        {
+          "key": "purchase_order_number",
+          "value": "Purchase Order ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text"
+        },
+        {
+          "key": "order_type",
+          "value": "Order Type",
+          "type": "text"
+        },{
+          "key": "clinic_name",
+          "value": "Buyer Name",
+          "type": "text"
+        },
+        {
+          "key": "supplier_id",
+          "value": "Supplier ID",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "formula_item_name",
+          "value": "Description",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "Supplier Product ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_category",
+          "value": "Category",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_subcategory",
+          "value": "Sub-Category",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_subsubcategory",
+          "value": "Sub-Sub-Category",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "uom",
+          "value": "Units of Measure",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "invoice_number",
+          "value": "Invoice Number",
+          "type": "text"
+        },
+        {
+          "key": "line_item_number",
+          "value": "Invoice Line Number",
+          "type": "text"
+        },
+        {
+          "key": "amount",
+          "value": "Amount",
+          "type": "text"
+        },
+        {
+          "key": "'AUD'",
+          "value": "Currency",
+          "type": "text"
+        },
+        {
+          "key": "invoice_created_date",
+          "value": "Invoice Created Date",
+          "type": "text"
+        },
+        {
+          "key": "invoice_date",
+          "value": "Invoice Date",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "Creator",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "Supplier Created",
+          "type": "text"
+        },{
+          "key": "formula_invoice_total",
+          "value": "Invoice Total",
+          "type": "text",
+          "unselected": true
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "All Transactions, PO Data",
+      "desc": "All Transactions, PO Data",
+      "reportView": "analytics.report_items_purchased_with_invoice_details_po_data",
+      "fields": [
+        {
+          "key": "supplier",
+          "value": "ContactName",
+          "type": "text"
+        },
+        {
+          "key": "email_id",
+          "value": "EmailAddress",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "POAddressLine1",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "POAddressLine2",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "POAddressLine3",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "POAddressLine4",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "POCity",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "PORegion",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "POPostalCode",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "POCountry",
+          "type": "text"
+        },
+        {
+          "key": "invoice_number",
+          "value": "InvoiceNumber",
+          "type": "text"
+        },
+        {
+          "key": "invoice_date",
+          "value": "InvoiceDate",
+          "type": "text"
+        },
+        {
+          "key": "due_date",
+          "value": "DueDate",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "InventoryItemCode",
+          "type": "text"
+        },
+        {
+          "key": "formula_item_name",
+          "value": "Description",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "purchase_order_number",
+          "value": "PurchaseOrderID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "SupplierProductID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "uom",
+          "value": "UnitsOfMeasure",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "status",
+          "value": "Status",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "manufacturer_id",
+          "value": "ManufacturerID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "manufacturer_name",
+          "value": "ManufacturerName",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "qty",
+          "value": "Quantity",
+          "type": "text"
+        },
+        {
+          "key": "unit_price",
+          "value": "UnitAmount",
+          "type": "text"
+        },
+        {
+          "key": "amount",
+          "value": "Amount",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "account_code",
+          "value": "AccountCode",
+          "type": "text"
+        },
+        {
+          "key": "sp_category",
+          "value": "Category",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_subcategory",
+          "value": "SubCategory",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_subsubcategory",
+          "value": "SubSubCategory",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "formula_tax_type",
+          "value": "TaxType",
+          "type": "text"
+        },
+        {
+          "key": "'Dental Practices'",
+          "value": "TrackingName1",
+          "type": "text"
+        },
+        {
+          "key": "epicor_id",
+          "value": "TrackingOption1",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "TrackingName2",
+          "type": "text"
+        },
+        {
+          "key": "''",
+          "value": "TrackingOption2",
+          "type": "text"
+        },
+        {
+          "key": "'AUD'",
+          "value": "Currency",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "D365 Transaction Report",
+      "desc": "Invoices to be Paid",
+      "reportView": "analytics.report_invoices_to_be_paid",
+      "fields": [
+        {
+          "value": "JOURNALBATCHNUMBER",
+          "type": "text",
+          "key": "journal_batch_number",
+          "required": true
+        },
+        {
+          "value": "LINENUMBER",
+          "type": "text",
+          "key": "line_number",
+          "required": true
+        },
+        {
+          "value": "TRANSDATE",
+          "type": "text",
+          "key": "trans_date",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTDISPLAYVALUE",
+          "type": "text",
+          "key": "account_display_value",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTTYPE",
+          "type": "text",
+          "key": "account_type",
+          "required": true
+        },
+        {
+          "value": "DEBITAMOUNT",
+          "type": "text",
+          "key": "debit_amount",
+          "required": true
+        },
+        {
+          "value": "CREDITAMOUNT",
+          "type": "text",
+          "key": "credit_amount",
+          "required": true
+        },
+        {
+          "value": "CURRENCYCODE",
+          "type": "text",
+          "key": "currency_code",
+          "required": true
+        },
+        {
+          "value": "DEFAULTDIMENSIONDISPLAYVALUE",
+          "type": "text",
+          "key": "default_dimension_display",
+          "required": true
+        },
+        {
+          "value": "DESCRIPTION",
+          "type": "text",
+          "key": "description",
+          "required": true
+        },
+        {
+          "value": "DOCUMENT",
+          "type": "text",
+          "key": "document",
+          "required": true
+        },
+        {
+          "value": "DOCUMENTDATE",
+          "type": "text",
+          "key": "document_date",
+          "required": true
+        },
+        {
+          "value": "EXCHANGERATE",
+          "type": "text",
+          "key": "exchange_rate",
+          "required": true
+        },
+        {
+          "value": "INVOICE",
+          "type": "text",
+          "key": "invoice",
+          "required": true
+        },
+        {
+          "value": "ITEMSALESTAXGROUP",
+          "type": "text",
+          "key": "item_sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "SALESTAXGROUP",
+          "type": "text",
+          "key": "sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "JOURNALNAME",
+          "type": "text",
+          "key": "journal_name",
+          "required": true
+        },
+        {
+          "value": "TEXT",
+          "type": "text",
+          "key": "text",
+          "required": true
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        }
+      ]
+    },
+    {
+      "title": "D365 Transaction Report - V2",
+      "desc": "Invoices to be Paid",
+      "reportView": "analytics.report_invoices_to_be_paid_v2",
+      "fields": [
+        {
+          "value": "JOURNALBATCHNUMBER",
+          "type": "text",
+          "key": "journal_batch_number",
+          "required": true
+        },
+        {
+          "value": "LINENUMBER",
+          "type": "text",
+          "key": "line_number",
+          "required": true
+        },
+        {
+          "value": "TRANSDATE",
+          "type": "text",
+          "key": "trans_date",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTDISPLAYVALUE",
+          "type": "text",
+          "key": "account_display_value",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTTYPE",
+          "type": "text",
+          "key": "account_type",
+          "required": true
+        },
+        {
+          "value": "DEBITAMOUNT",
+          "type": "text",
+          "key": "debit_amount",
+          "required": true
+        },
+        {
+          "value": "CREDITAMOUNT",
+          "type": "text",
+          "key": "credit_amount",
+          "required": true
+        },
+        {
+          "value": "CURRENCYCODE",
+          "type": "text",
+          "key": "currency_code",
+          "required": true
+        },
+        {
+          "value": "DEFAULTDIMENSIONDISPLAYVALUE",
+          "type": "text",
+          "key": "default_dimension_display",
+          "required": true
+        },
+        {
+          "value": "DESCRIPTION",
+          "type": "text",
+          "key": "description",
+          "required": true
+        },
+        {
+          "value": "DOCUMENT",
+          "type": "text",
+          "key": "document",
+          "required": true
+        },
+        {
+          "value": "DOCUMENTDATE",
+          "type": "text",
+          "key": "document_date",
+          "required": true
+        },
+        {
+          "value": "EXCHANGERATE",
+          "type": "text",
+          "key": "exchange_rate",
+          "required": true
+        },
+        {
+          "value": "INVOICE",
+          "type": "text",
+          "key": "invoice",
+          "required": true
+        },
+        {
+          "value": "ITEMSALESTAXGROUP",
+          "type": "text",
+          "key": "item_sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "SALESTAXGROUP",
+          "type": "text",
+          "key": "sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "JOURNALNAME",
+          "type": "text",
+          "key": "journal_name",
+          "required": true
+        },
+        {
+          "value": "TEXT",
+          "type": "text",
+          "key": "text",
+          "required": true
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        }
+      ]
+    },
+    {
+      "title": "D365 Transaction Report - V3",
+      "desc": "Invoices to be Paid",
+      "reportView": "analytics.report_invoices_to_be_paid_v3",
+      "fields": [
+        {
+          "value": "JOURNALBATCHNUMBER",
+          "type": "text",
+          "key": "journal_batch_number",
+          "required": true
+        },
+        {
+          "value": "LINENUMBER",
+          "type": "text",
+          "key": "line_number",
+          "required": true
+        },
+        {
+          "value": "TRANSDATE",
+          "type": "text",
+          "key": "''",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTDISPLAYVALUE",
+          "type": "text",
+          "key": "account_display_value",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTTYPE",
+          "type": "text",
+          "key": "account_type",
+          "required": true
+        },
+        {
+          "value": "DEBITAMOUNT",
+          "type": "text",
+          "key": "debit_amount",
+          "required": true
+        },
+        {
+          "value": "CREDITAMOUNT",
+          "type": "text",
+          "key": "credit_amount",
+          "required": true
+        },
+        {
+          "value": "CURRENCYCODE",
+          "type": "text",
+          "key": "currency_code",
+          "required": true
+        },
+        {
+          "value": "DEFAULTDIMENSIONDISPLAYVALUE",
+          "type": "text",
+          "key": "default_dimension_display",
+          "required": true
+        },
+        {
+          "value": "DESCRIPTION",
+          "type": "text",
+          "key": "description",
+          "required": true
+        },
+        {
+          "value": "DOCUMENT",
+          "type": "text",
+          "key": "document",
+          "required": true
+        },
+        {
+          "value": "DOCUMENTDATE",
+          "type": "text",
+          "key": "document_date",
+          "required": true
+        },
+        {
+          "value": "EXCHANGERATE",
+          "type": "text",
+          "key": "exchange_rate",
+          "required": true
+        },
+        {
+          "value": "INVOICE",
+          "type": "text",
+          "key": "invoice",
+          "required": true
+        },
+        {
+          "value": "ITEMSALESTAXGROUP",
+          "type": "text",
+          "key": "item_sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "SALESTAXGROUP",
+          "type": "text",
+          "key": "sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "JOURNALNAME",
+          "type": "text",
+          "key": "journal_name",
+          "required": true
+        },
+        {
+          "value": "TEXT",
+          "type": "text",
+          "key": "text",
+          "required": true
+        },
+        {
+          "value": "VOUCHER",
+          "type": "text",
+          "key": "voucher"
+        },
+        {
+          "value": "INVOICEAPPROVEDDATE",
+          "type": "text",
+          "key": "invoice_approved_date"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        }
+      ]
+    },
+    {
+      "title": "Invoiced, received a month later",
+      "desc": "Items that received a month after the invoice date",
+      "reportView": "analytics.report_invoices_received_a_month_later",
+      "fields": [
+        {
+          "value": "JOURNALBATCHNUMBER",
+          "type": "text",
+          "key": "journal_batch_number",
+          "required": true
+        },
+        {
+          "value": "LINENUMBER",
+          "type": "text",
+          "key": "line_number",
+          "required": true
+        },
+        {
+          "value": "TRANSDATE",
+          "type": "text",
+          "key": "trans_date",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTDISPLAYVALUE",
+          "type": "text",
+          "key": "account_display_value",
+          "required": true
+        },
+        {
+          "value": "ACCOUNTTYPE",
+          "type": "text",
+          "key": "account_type",
+          "required": true
+        },
+        {
+          "value": "DEBITAMOUNT",
+          "type": "text",
+          "key": "debit_amount",
+          "required": true
+        },
+        {
+          "value": "CREDITAMOUNT",
+          "type": "text",
+          "key": "credit_amount",
+          "required": true
+        },
+        {
+          "value": "CURRENCYCODE",
+          "type": "text",
+          "key": "currency_code",
+          "required": true
+        },
+        {
+          "value": "DEFAULTDIMENSIONDISPLAYVALUE",
+          "type": "text",
+          "key": "default_dimension_display",
+          "required": true
+        },
+        {
+          "value": "DESCRIPTION",
+          "type": "text",
+          "key": "description",
+          "required": true
+        },
+        {
+          "value": "DOCUMENT",
+          "type": "text",
+          "key": "document",
+          "required": true
+        },
+        {
+          "value": "DOCUMENTDATE",
+          "type": "text",
+          "key": "document_date",
+          "required": true
+        },
+        {
+          "value": "EXCHANGERATE",
+          "type": "text",
+          "key": "exchange_rate",
+          "required": true
+        },
+        {
+          "value": "INVOICE",
+          "type": "text",
+          "key": "invoice",
+          "required": true
+        },
+        {
+          "value": "ITEMSALESTAXGROUP",
+          "type": "text",
+          "key": "item_sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "SALESTAXGROUP",
+          "type": "text",
+          "key": "sales_tax_group",
+          "required": true
+        },
+        {
+          "value": "JOURNALNAME",
+          "type": "text",
+          "key": "journal_name",
+          "required": true
+        },
+        {
+          "value": "TEXT",
+          "type": "text",
+          "key": "text",
+          "required": true
+        },
+        {
+          "value": "RECEIVEDDATE",
+          "type": "text",
+          "key": "received_date",
+          "required": true
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        }
+      ]
+    },
+    {
+      "title": "Navision Transaction Report",
+      "desc": "Navision Transaction Report",
+      "reportView": "analytics.report_maven",
+      "fields": [
+        {
+          "key": "identifier",
+          "value": "Identifier",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "line_identifier",
+          "value": "Line Identifier",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "line",
+          "value": "Line",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "account_number",
+          "value": "Account Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "document_date",
+          "value": "Document Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "posting_date",
+          "value": "Posting Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "document_no",
+          "value": "Document No",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "description",
+          "value": "Description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "amount",
+          "value": "Amount",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "practice",
+          "value": "Practice",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "clinician",
+          "value": "Clinician",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "gst_amount",
+          "value": "GST Amount",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "tax_code",
+          "value": "Tax Code",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "filters": [
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        }
+      ]
+    },
+    {
+      "title": "Navision Transaction Report V2",
+      "desc": "Navision Transaction Report V2",
+      "reportView": "analytics.report_maven_v2",
+      "fields": [
+        {
+          "key": "identifier",
+          "value": "Identifier",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "line_identifier",
+          "value": "Line Identifier",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "line",
+          "value": "Line",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "account_number",
+          "value": "Account Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "document_date",
+          "value": "Document Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "posting_date",
+          "value": "Posting Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "document_no",
+          "value": "Document No",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "description",
+          "value": "Description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "amount",
+          "value": "Amount",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "practice",
+          "value": "Practice",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "clinician",
+          "value": "Clinician",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "gst_amount",
+          "value": "GST Amount",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "tax_code",
+          "value": "Tax Code",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "filters": [
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        }
+      ]
+    },
+    {
+      "title": "Navision Transaction Report V3",
+      "desc": "Navision Transaction Report V3",
+      "reportView": "analytics.report_maven_v3",
+      "fields": [
+        {
+          "key": "identifier",
+          "value": "Identifier",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "line_identifier",
+          "value": "Line Identifier",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "line",
+          "value": "Line",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "account_number",
+          "value": "Account Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "document_date",
+          "value": "Document Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "posting_date",
+          "value": "Posting Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "document_no",
+          "value": "Document No",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "fx_description",
+          "value": "Description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "amount",
+          "value": "Amount",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "practice",
+          "value": "Practice",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "clinician",
+          "value": "Clinician",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "gst_amount",
+          "value": "GST Amount",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "tax_code",
+          "value": "Tax Code",
+          "type": "text",
+          "required": true
+        },
+        {
+          "value": "Invoice Approved Date",
+          "type": "text",
+          "key": "invoice_approved_date"
+        }
+      ],
+      "filters": [
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        }
+      ]
+    },
+    {
+      "title": "Disputed Invoices",
+      "desc": "Disputed Invoices",
+      "reportView": "analytics.report_disputed_invoices",
+      "fields": [
+        {
+          "key": "dispute_level",
+          "value": "Dispute Level",
+          "type": "text"
+        },
+        {
+          "key": "dispute_type",
+          "value": "Dispute Type",
+          "type": "text"
+        },
+        {
+          "key": "dispute_reason",
+          "value": "Dispute Reason",
+          "type": "text"
+        },
+        {
+          "key": "sku",
+          "value": "SKU",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "value": "Status",
+          "type": "text"
+        },
+        {
+          "key": "invoice_number",
+          "value": "Invoice Number",
+          "type": "text"
+        },
+        {
+          "key": "inv_date",
+          "value": "Invoice Date",
+          "type": "text"
+        },
+        {
+          "key": "due_date",
+          "value": "Due Date",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "billing_address",
+          "value": "Billing Address",
+          "type": "text"
+        },
+        {
+          "key": "shipping_address",
+          "value": "Shipping Address",
+          "type": "text"
+        },
+        {
+          "key": "po_num",
+          "value": "PO Number",
+          "type": "text"
+        },
+        {
+          "key": "order_num",
+          "value": "Order Number",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text"
+        },
+        {
+          "key": "email",
+          "value": "Email",
+          "type": "text"
+        },
+        {
+          "key": "clinic_number",
+          "value": "Clinic Number",
+          "type": "text"
+        },
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text"
+        },
+        {
+          "key": "disputed_amount",
+          "value": "Disputed Amount",
+          "type": "text"
+        },
+        {
+          "key": "invoice_total",
+          "value": "Invoice Total",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        }
+      ]
+    },
+    {
+      "title": "Backordered",
+      "desc": "List of items purchased with status of open, backorder, ship, or cancel.",
+      "reportView": "analytics.report_backordered",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text"
+        },
+        {
+          "key": "epicor_id",
+          "value": "Location ID",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "po_or_order_id",
+          "value": "Purchase Order ID",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "received_date",
+          "value": "Received Date",
+          "type": "text"
+        },
+        {
+          "key": "item_name",
+          "value": "Item Name",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "Supplier Product ID",
+          "type": "text"
+        },
+        {
+          "key": "uom",
+          "value": "Units of Measure",
+          "type": "text"
+        },
+        {
+          "key": "uom_quantity",
+          "value": "UOM Quantity",
+          "type": "text"
+        },
+        {
+          "key": "unspsc",
+          "value": "UNSPSC",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "sp_category",
+          "value": "Category",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "value": "Status",
+          "type": "text"
+        },
+        {
+          "key": "quantity",
+          "value": "Ordered Quantity",
+          "type": "text"
+        },
+        {
+          "key": "received_qty",
+          "value": "Received Quantity",
+          "type": "text"
+        },
+        {
+          "key": "unit_price",
+          "value": "Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "total_price",
+          "value": "Total Price",
+          "type": "text"
+        },
+        {
+          "key": "order_type",
+          "value": "Order Type",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "account_code",
+          "value": "GL Code",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "formula_orderer_name",
+          "value": "Orderer Name",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "du.email",
+          "value": "Orderer Email",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "order_approver",
+          "value": "Order Approver",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "vendor_code",
+          "value": "Vendor ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "fx_account_code_expansion",
+          "value": "Additional Account Codes",
+          "unselected": true,
+          "type": "none"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Items Purchased By Category",
+      "desc": "List of items purchased with an MSDS.",
+      "reportView": "analytics.report_items_purchased_by_category",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text"
+        },
+        {
+          "key": "epicor_id",
+          "value": "Location ID",
+          "type": "text"
+        },
+        {
+          "key": "email_id",
+          "value": "Email ID",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text"
+        },
+        {
+          "key": "po_or_order_id",
+          "value": "Purchase Order ID",
+          "type": "text"
+        },
+        {
+          "key": "received_date",
+          "value": "Received Date",
+          "type": "text"
+        },
+        {
+          "key": "item_name",
+          "value": "Item Name",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "Supplier Product ID",
+          "type": "text"
+        },
+        {
+          "key": "uom",
+          "value": "Units of Measure",
+          "type": "text"
+        },
+        {
+          "key": "uom_quantity",
+          "value": "UOM Quantity",
+          "type": "text"
+        },
+        {
+          "key": "sp_category",
+          "value": "Category",
+          "type": "text"
+        },
+        {
+          "key": "sp_subcategory",
+          "value": "Sub-Category",
+          "type": "text"
+        },
+        {
+          "key": "sp_subsubcategory",
+          "value": "Sub-Sub-Category",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "value": "Status",
+          "type": "text"
+        },
+        {
+          "key": "manufacturer_id",
+          "value": "Manufacturer ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "manufacturer_name",
+          "value": "Manufacturer Name",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "unspsc",
+          "value": "UNSPSC",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "msds",
+          "value": "MSDS",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "quantity",
+          "value": "Ordered Quantity",
+          "type": "text"
+        },
+        {
+          "key": "received_qty",
+          "value": "Received Quantity",
+          "type": "text"
+        },
+        {
+          "key": "unit_price",
+          "value": "Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "total_price",
+          "value": "Total Price",
+          "type": "text"
+        },
+        {
+          "key": "is_dentira_order",
+          "value": "Is Dentira Order",
+          "type": "text"
+        },
+        {
+          "key": "is_off_catalog",
+          "value": "Is Off Catalog",
+          "type": "text"
+        },
+        {
+          "key": "formulary",
+          "value": "Is Trusted",
+          "type": "text"
+        },
+        {
+          "key": "order_type",
+          "value": "Order Type",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "account_code",
+          "value": "GL Code",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "formula_orderer_name",
+          "value": "Orderer Name",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "du.email",
+          "value": "Orderer Email",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "order_approver",
+          "value": "Order Approver",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "vendor_code",
+          "value": "Vendor ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "fx_account_code_expansion",
+          "value": "Additional Account Codes",
+          "unselected": true,
+          "type": "none"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        },
+        {
+          "type": "offCatalogOnly"
+        }
+      ]
+    },
+    {
+      "title": "Items Purchased by Manufacturer and Category with Invoice Details",
+      "desc": "Detailed list of items purchased by manufacturer and category with invoice details. One PO can have several Invoices.",
+      "reportView": "analytics.report_order_history_with_invoice_details",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "epicor_id",
+          "value": "Location ID",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "invoice_date",
+          "value": "Invoice Date",
+          "type": "text"
+        },
+        {
+          "key": "invoice_number",
+          "value": "Invoice Number",
+          "type": "text"
+        },
+        {
+          "key": "purchase_order_number",
+          "value": "Purchase Order ID",
+          "type": "text"
+        },
+        {
+          "key": "item_name",
+          "value": "Item Name",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "Supplier Product ID",
+          "type": "text"
+        },
+        {
+          "key": "uom",
+          "value": "Units of Measure",
+          "type": "text"
+        },
+        {
+          "key": "uom_quantity",
+          "value": "UOM Quantity",
+          "type": "text"
+        },
+        {
+          "key": "category",
+          "value": "Category",
+          "type": "text"
+        },
+        {
+          "key": "sp_subcategory",
+          "value": "Sub-Category",
+          "type": "text"
+        },
+        {
+          "key": "sp_subsubcategory",
+          "value": "Sub-Sub-Category",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "value": "Status",
+          "type": "text"
+        },
+        {
+          "key": "manufacturer_id",
+          "value": "Manufacturer ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "manufacturer_name",
+          "value": "Manufacturer Name",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "qty",
+          "value": "Quantity",
+          "type": "text"
+        },
+        {
+          "key": "unit_price",
+          "value": "Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "amount",
+          "value": "Amount",
+          "type": "text"
+        },
+        {
+          "key": "formulary",
+          "value": "Is Trusted",
+          "type": "text"
+        },
+        {
+          "key": "order_type",
+          "value": "Order Type",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "account_code",
+          "value": "GL Code",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "received_date",
+          "value": "Received Date",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "formula_orderer_name",
+          "value": "Orderer Name",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "du.email",
+          "value": "Orderer Email",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "order_approver",
+          "value": "Order Approver",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "vendor_code",
+          "value": "Vendor ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "fx_account_code_expansion",
+          "value": "Additional Account Codes",
+          "unselected": true,
+          "type": "none"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        },
+        {
+          "type": "offCatalogOnly"
+        }
+      ]
+    },
+    {
+      "title": "Items Received",
+      "desc": "List of closed credits displaying the date and amount credited.",
+      "reportView": "analytics.report_items_received",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text"
+        },
+        {
+          "key": "epicor_id",
+          "value": "Location ID",
+          "type": "text"
+        },
+        {
+          "key": "email_id",
+          "value": "Email ID",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text"
+        },
+        {
+          "key": "po_or_order_id",
+          "value": "Purchase Order ID",
+          "type": "text"
+        },
+        {
+          "key": "received_date",
+          "value": "Received Date",
+          "type": "text"
+        },
+        {
+          "key": "item_name",
+          "value": "Item Name",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "Supplier Product ID",
+          "type": "text"
+        },
+        {
+          "key": "uom",
+          "value": "Units of Measure",
+          "type": "text"
+        },
+        {
+          "key": "uom_quantity",
+          "value": "UOM Quantity",
+          "type": "text"
+        },
+        {
+          "key": "sp_category",
+          "value": "Category",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "value": "Status",
+          "type": "text"
+        },
+        {
+          "key": "unspsc",
+          "value": "UNSPSC",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "quantity",
+          "value": "Ordered Quantity",
+          "type": "text"
+        },
+        {
+          "key": "received_qty",
+          "value": "Received Quantity",
+          "type": "text"
+        },
+        {
+          "key": "unit_price",
+          "value": "Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "total_price",
+          "value": "Total Price",
+          "type": "text"
+        },
+        {
+          "key": "formulary",
+          "value": "Is Trusted",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "order_type",
+          "value": "Order Type",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "account_code",
+          "value": "GL Code",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "formula_orderer_name",
+          "value": "Orderer Name",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "du.email",
+          "value": "Orderer Email",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "order_approver",
+          "value": "Order Approver",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "vendor_code",
+          "value": "Vendor ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "fx_account_code_expansion",
+          "value": "Additional Account Codes",
+          "unselected": true,
+          "type": "none"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Monthly Budget",
+      "desc": "List of closed credits displaying the date and amount credited.",
+      "reportView": "analytics.report_monthly_budget",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "epicor_id",
+          "value": "Location ID",
+          "type": "text"
+        },
+        {
+          "key": "du.email",
+          "value": "Email",
+          "type": "text"
+        },
+        {
+          "key": "month",
+          "value": "Month",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "total_spend",
+          "value": "Total Spend",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "total_budget",
+          "value": "Budget",
+          "type": "text"
+        },
+        {
+          "key": "percent_spend",
+          "value": "Percent Budget Used",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Monthly Spend By Category",
+      "desc": "List of monthly spend by category.",
+      "reportView": "analytics.report_monthly_spend_by_category",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "epicor_id",
+          "value": "Location ID",
+          "type": "text"
+        },
+        {
+          "key": "month",
+          "value": "Month",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "category",
+          "value": "Category",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "total_spend",
+          "value": "Total Spend",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "total_budget",
+          "value": "Budget",
+          "type": "text"
+        },
+        {
+          "key": "percent_spend",
+          "value": "Percent Budget Used",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Top 1000 Items by Sale",
+      "desc": "Top 1000 items purchased by total amount per item",
+      "reportView": "analytics.report_top_1000_items_by_sale",
+      "fields": [
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "SKU",
+          "type": "text"
+        },
+        {
+          "key": "manufacturer_name",
+          "value": "Manufacturer Name",
+          "type": "text"
+        },
+        {
+          "key": "manufacturer_id",
+          "value": "Manufacturer SKU",
+          "type": "text"
+        },
+        {
+          "key": "item_name",
+          "value": "Item Name",
+          "type": "text"
+        },
+        {
+          "key": "total_quantity",
+          "value": "Total Quantity",
+          "type": "text"
+        },
+        {
+          "key": "average_unit_price",
+          "value": "Average Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "number_of_office",
+          "value": "# offices bought",
+          "type": "text"
+        },
+        {
+          "key": "total_spent",
+          "value": "Total Spent",
+          "type": "text"
+        },
+        {
+          "key": "is_formulary",
+          "value": "Is Formulary",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Formulary Spend By Office",
+      "desc": "Formulary Spend By Office",
+      "reportView": "analytics.report_formulary_spend_by_office",
+      "fields": [
+        {
+          "key": "office_name",
+          "value": "Office Name",
+          "type": "text"
+        },
+        {
+          "key": "office_id",
+          "value": "Office ID",
+          "type": "text"
+        },
+        {
+          "key": "formulary_spend",
+          "value": "Formulary Spend",
+          "type": "text"
+        },
+        {
+          "key": "non_formulary_spend",
+          "value": "Non-Formulary Spend",
+          "type": "text"
+        },
+        {
+          "key": "top_non_formulary_item",
+          "value": "Top Non-Formulary Item",
+          "type": "text"
+        },
+        {
+          "key": "percent_spend_in_formulary",
+          "value": "Percent spend in Formulary",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Top 1000 Non Formulary Items by Spend",
+      "desc": "Top 1000 Non Formulary Items by Spend",
+      "reportView": "analytics.report_top_1000_non_formulary_items_by_spend",
+      "fields": [
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "SKU",
+          "type": "text"
+        },
+        {
+          "key": "item_name",
+          "value": "Item Name",
+          "type": "text"
+        },
+        {
+          "key": "total_quantity",
+          "value": "Total Quantity",
+          "type": "text"
+        },
+        {
+          "key": "average_unit_price",
+          "value": "Average Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "number_of_office",
+          "value": "# offices bought",
+          "type": "text"
+        },
+        {
+          "key": "total_spent",
+          "value": "Total Spent",
+          "type": "text"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Accrual Report",
+      "desc": "Purchases that are not sentForPayment yet.",
+      "reportView": "analytics.report_accural",
+      "fields": [
+        {
+          "key": "clinic_name",
+          "value": "Clinic Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "epicor_id",
+          "value": "Clinic ID",
+          "type": "text"
+        },
+        {
+          "key": "order_date",
+          "value": "Order Date",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "purchase_order_number",
+          "value": "Purchase Order ID",
+          "type": "text"
+        },
+        {
+          "key": "received_date",
+          "value": "Received Date",
+          "type": "text"
+        },
+        {
+          "key": "supplier",
+          "value": "Supplier Name",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "Supplier SKU",
+          "type": "text"
+        },
+        {
+          "key": "uom",
+          "value": "UOM",
+          "type": "text"
+        },
+        {
+          "key": "uom_quantity",
+          "value": "UOM Quantity",
+          "type": "text"
+        },
+        {
+          "key": "category",
+          "value": "Category",
+          "type": "text"
+        },
+        {
+          "key": "qty",
+          "value": "Ordered Quantity",
+          "type": "text"
+        },
+        {
+          "key": "received_qty",
+          "value": "Received Quantity",
+          "type": "text"
+        },
+        {
+          "key": "unit_price",
+          "value": "Unit Price",
+          "type": "text"
+        },
+        {
+          "key": "amount",
+          "value": "Total Price",
+          "type": "text"
+        },
+        {
+          "key": "fx_invoice_taxes",
+          "value": "Tax",
+          "type": "text"
+        },
+        {
+          "key": "fx_invoice_shipping",
+          "value": "Shipping",
+          "type": "text"
+        },
+        {
+          "key": "is_dentira_order",
+          "value": "Is Dentira Order",
+          "type": "text"
+        },
+        {
+          "key": "is_off_catalog",
+          "value": "Is Off Catalog",
+          "type": "text"
+        },
+        {
+          "key": "invoice_date",
+          "value": "Invoice Date",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "value": "Invoice Status",
+          "type": "text"
+        },
+        {
+          "key": "invoice_number",
+          "value": "Invoice Number",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "manufacturer_id",
+          "value": "Manufacturer ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "manufacturer_name",
+          "value": "Manufacturer Name",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "order_type",
+          "value": "Order Type",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "account_code",
+          "value": "GL Code",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "du.email",
+          "value": "Orderer Email",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "vendor_code",
+          "value": "Vendor ID",
+          "type": "text",
+          "unselected": true
+        },
+        {
+          "key": "fx_account_code_expansion",
+          "value": "Additional Account Codes",
+          "unselected": true,
+          "type": "none"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        },
+        {
+          "type": "supplier"
+        },
+        {
+          "type": "serviceEquipments"
+        }
+      ]
+    },
+    {
+      "title": "Total Spent on Item by Clinic",
+      "desc": "Total Spent on Item by Clinic",
+      "reportView": "analytics.report_total_spent_on_item_by_clinic",
+      "fields": [
+        {
+          "key": "supplier",
+          "value": "Supplier",
+          "type": "text"
+        },
+        {
+          "key": "supplier_product_id",
+          "value": "SKU",
+          "type": "text"
+        },
+        {
+          "key": "formulary",
+          "value": "Formulary",
+          "type": "text"
+        },
+        {
+          "key": "account_code",
+          "value": "GL Code",
+          "type": "text"
+        },
+        {
+          "key": "du.clinic_name",
+          "value": "Location Name",
+          "type": "text"
+        },
+        {
+          "key": "du.epicor_id",
+          "value": "Location ID",
+          "type": "text"
+        },
+        {
+          "key": "total_quantity",
+          "value": "QTY Bought",
+          "type": "text"
+        },
+        {
+          "key": "total_price",
+          "value": "Total Spent",
+          "type": "text"
+        },
+        {
+          "key": "fx_account_code_expansion",
+          "value": "Additional Account Codes",
+          "unselected": true,
+          "type": "none"
+        }
+      ],
+      "filters": [
+        {
+          "type": "clinic"
+        },
+        {
+          "type": "date_range",
+          "values": [
+            {
+              "key": "1",
+              "value": "Last 1 Day"
+            },
+            {
+              "key": "7",
+              "value": "Last 7 Days"
+            },
+            {
+              "key": "14",
+              "value": "Last 14 Days"
+            },
+            {
+              "key": "30",
+              "value": "Last 1 Month"
+            },
+            {
+              "key": "90",
+              "value": "Last 3 Months"
+            },
+            {
+              "key": "180",
+              "value": "Last 6 Months"
+            }
+          ],
+          "default": 3
+        }
+      ]
+    }
+  ]
+}
