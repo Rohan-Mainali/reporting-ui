@@ -1,7 +1,8 @@
 import React from "react"
-import { Grid, Typography, Paper, Dialog, DialogActions, DialogTitle, DialogContent, DialogContentText } from "@mui/material";
+import { Grid, Typography, Paper, Dialog, DialogActions, DialogTitle, DialogContent, DialogContentText, Snackbar, Alert } from "@mui/material";
 import Report from "../Reports";
 import Box from '@mui/material/Box';
+import MuiAlert from '@mui/material/Alert';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import PropTypes from 'prop-types';
@@ -11,7 +12,7 @@ import TableComponent from "../Table";
 import CloseIcon from '@mui/icons-material/Close';
 import CustomDropDown from "../ui-components/CustomDropDown";
 import { useSelector, useDispatch } from "react-redux";
-import { showModal, recordRoute, showDialog, fetchReports } from "../../redux/slices/routeSlice";
+import { showModal, recordRoute, showDialog, fetchReports, setMode } from "../../redux/slices/routeSlice";
 import ViewConfig from "../Reports/View";
 import NoContent from "./noContent";
 import { PopOver } from "../ui-components/PopOver";
@@ -87,7 +88,15 @@ const Dashboard = () => {
   const [show, setShow] = React.useState(false);
   const [reports, setReports] = React.useState(false);
   const [scheduledReports, setScheduledReports] = React.useState(false);
-  const [modalVisible, setModalVisible] = React.useState(true);
+  const [toastVisible, setToastVisible] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  // Automatically close the alert after 3000 milliseconds (3 seconds)
+  setTimeout(handleClose, 3000);
 
   const reportModal = (toggle) => { return { show: toggle, type: 'report' } }
   const handletChange = (event, newValue) => {
@@ -142,6 +151,11 @@ const Dashboard = () => {
 
   return (
     <>
+      <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={toastVisible} autoHideDuration={2000} onClose={() => { setToastVisible(false) }}>
+        <Alert onClose={() => { setToastVisible(false) }} severity="success" sx={{ width: '100%' }}>
+          Your issue has been recorded
+        </Alert>
+      </Snackbar>
       <Box container>
         <Box sx={{
           padding: '24px 16px 0 32px',
@@ -212,7 +226,7 @@ const Dashboard = () => {
               </Paper>
               {(modalShow.type === 'report') ?
                 <Report /> :
-                modalShow.type === 'issue' ? <ReportIssueModal data={modalShow.value} closeModal={() => { setModalVisible(false); dispatch(showModal({ show: false })) }} /> :
+                modalShow.type === 'issue' ? <ReportIssueModal data={modalShow.value} closeModal={() => { setToastVisible(true); dispatch(showModal({ show: false })) }} /> :
                   <ViewConfig data={modalShow.value} />
               }
             </Box>
