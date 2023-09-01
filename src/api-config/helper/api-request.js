@@ -82,7 +82,7 @@ const manageErrorResponse = error => {
 
 
 export default function initApiRequest({
-  url ,
+  url,
   apiDetails,
   requestData,
   pathVariables,
@@ -91,6 +91,7 @@ export default function initApiRequest({
   withCredentials = false,
   market = 'en'
 }) {
+  console.log('path', pathVariables)
   if (Object.keys(pathVariables || {}).length) {
     apiDetails.url = Object.entries(pathVariables).reduce((acc, [key, value]) => {
       return acc.replace(`${key}`, value?.toString());
@@ -102,6 +103,8 @@ export default function initApiRequest({
   let headers = getRequestHeaders(apiDetails);
   headers = { ...headers, ...extraHeaders };
   const transformedRequestData = transformRequestData(apiDetails, requestData);
+
+  console.log('base', baseURL)
   let axiosReqParams = {
     baseURL,
     url: apiDetails.url,
@@ -119,32 +122,32 @@ export default function initApiRequest({
     };
   }
   let redirect_url;
-  switch(market){
-      case 'au':
-          redirect_url = process.env.REACT_APP_REDIRECT_URL_AU;
+  switch (market) {
+    case 'au':
+      redirect_url = process.env.REACT_APP_REDIRECT_URL_AU;
       break;
-      case 'ca':
-          redirect_url = process.env.REACT_APP_REDIRECT_URL_CA;
+    case 'ca':
+      redirect_url = process.env.REACT_APP_REDIRECT_URL_CA;
       break;
-      case 'nz':
-          redirect_url = process.env.REACT_APP_REDIRECT_URL_NZ;
+    case 'nz':
+      redirect_url = process.env.REACT_APP_REDIRECT_URL_NZ;
       break;
-      case 'canada':
-          redirect_url = process.env.REACT_APP_REDIRECT_URL_CA;
+    case 'canada':
+      redirect_url = process.env.REACT_APP_REDIRECT_URL_CA;
       break;
-      default:
-          redirect_url = process.env.REACT_APP_REDIRECT_URL;
+    default:
+      redirect_url = process.env.REACT_APP_REDIRECT_URL;
       break;
   }
   return Axios.request(axiosReqParams)
     .then(response => {
 
-      if (withCredentials) { 
-        if(((response?.status) && response.status === 401) || (response?.data?.response && Object.keys(response.data.response).length === 0)) {
+      if (withCredentials) {
+        if (((response?.status) && response.status === 401) || (response?.data?.response && Object.keys(response.data.response).length === 0)) {
           window.location.replace(redirect_url)
-        } 
+        }
       }
-      if((response?.status) && response.status === 401) {
+      if ((response?.status) && response.status === 401) {
         window.location.replace(redirect_url)
       }
       return {
@@ -156,14 +159,14 @@ export default function initApiRequest({
     })
     .catch(error => {
       if (withCredentials) {
-        if(((error?.response?.status) && error?.response.status === 401) || (error?.response?.data?.response && Object.keys(error?.response.data.response).length === 0)) {
+        if (((error?.response?.status) && error?.response.status === 401) || (error?.response?.data?.response && Object.keys(error?.response.data.response).length === 0)) {
           window.location.replace(redirect_url)
         }
       }
-      if((error?.response?.status) && error?.response.status === 401) {
+      if ((error?.response?.status) && error?.response.status === 401) {
         window.location.replace(redirect_url)
       }
-      console.log(error) 
+      console.log(error)
 
       return {
         ...manageErrorResponse(error.response || {}),

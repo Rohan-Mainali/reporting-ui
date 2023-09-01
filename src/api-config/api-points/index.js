@@ -5,6 +5,10 @@ const apiPoints = {
       url: "/api/report/",
       requestType: REQUEST_METHOD.GET
     },
+    reportIssue: {
+      url: "/api/report/issue/",
+      requestType: REQUEST_METHOD.POST
+    },
     getUser: {
       url: "/api/filters/user",
       requestType: REQUEST_METHOD.GET
