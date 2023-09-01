@@ -9,6 +9,7 @@ import uploadImg from '../../../assets/cloud_file_upload_server_icon_196427.png'
 import style from '../../ui-components/styles/ImageInput.module.css'
 import initApiRequest from '../../../api-config/helper/api-request';
 import apiPoints from '../../../api-config/api-points';
+import { convertFileSizeToHumanReadable } from '../../utils/generalUtilityFunction';
 
 const p_style = {
   margin: '10px 0 0 0',
@@ -69,29 +70,31 @@ const ReportIssueModal = ({ data, alert, closeModal }) => {
   const handleFileUpload = (event) => {
     const inputFiles = event.target.files;
     const fileSizeThreshold = 100 * 1024 * 1024;
-    for (const file of inputFiles) {
-      if (file.size <= fileSizeThreshold) {
-        setFiles(prevFiles => [
-          ...prevFiles,
-          {
-            id: Date.now(),
-            name: file.name,
-            size: file.size,
-            file: file,
-          }
-        ]);
-      } else {
-        setError('Please upload file below 100MB')
-      }
+    const fileSizeInBytes = inputFiles[0].size;
+    const fileSizeInMB = fileSizeInBytes / (1024 * 1024);
+    if (fileSizeInMB < 100) {
+      setError(null)
+      setFiles(prevFiles => [
+        ...prevFiles,
+        {
+          id: Date.now(),
+          name: inputFiles[0].name,
+          size: inputFiles[0].size,
+          readbaleSize: convertFileSizeToHumanReadable(inputFiles[0].size),
+          file: inputFiles[0],
+        }
+      ]);
+    } else {
+      setError('Please upload file below 100MB')
     }
   };
-
   const handleDeleteFile = (id) => {
     const updatedFiles = files.filter(file => file.id !== id);
     setFiles(updatedFiles);
   }
 
   const handleSubmit = async (e) => {
+    setError(null)
     e.preventDefault()
     try {
       setLoading(true)
@@ -167,7 +170,7 @@ const ReportIssueModal = ({ data, alert, closeModal }) => {
                     {files.map((file) => (
                       <tr key={file.id}>
                         <td>{file.name}</td>
-                        <td>{Math.round(file.size / 1024)} KB</td>
+                        <td>{file.readbaleSize}</td>
                         <td>
                           <button onClick={() => handleDeleteFile(file.id)} style={{ border: 'none', background: 'white', cursor: 'pointer' }}>
                             <DeleteIcon
