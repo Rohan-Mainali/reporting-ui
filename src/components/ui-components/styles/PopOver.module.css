@@ -1,16 +1,22 @@
 .popover {
-        background-color: #1c87c9;
+        background-color: #00AD6F;
         -webkit-border-radius: 60px;
         border-radius: 60px;
         border: none;
-        color: #eeeeee;
+        color: #fff;
         cursor: pointer;
         display: inline-block;
         font-family: Roboto, sans-serif;
         font-size: 16px;
-        padding: 5px 15px;
+        padding: 16px;
         text-align: center;
         text-decoration: none;
+        width:50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
       }
       @keyframes glowing {
         0% {
@@ -33,4 +39,39 @@
       }
 .popover {
         animation: glowing 6s infinite;
+}
+
+.hidePopover{ 
+  background-color: #00AD6F;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  width:50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+  @keyframes hideGlowing{
+    0% {
+      background-color: #2ba805;
+      box-shadow: 0 0 5px #2ba805;
+    }
+    100% {
+      background-color: #2ba805;
+      box-shadow: 0 0 5px #2ba805;
+    }
+  }
+.hidePopover{
+  animation: hideGlowing 1s infinite
+  ;
 }

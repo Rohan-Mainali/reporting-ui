@@ -12,6 +12,7 @@ import {
   useParams,
   useSearchParams
 } from "react-router-dom";
+import Widget from "../components/Widget";
 const Alert = React.forwardRef(function Alert(props, ref) {
 	return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
   });
@@ -103,6 +104,7 @@ function Home() {
 
 		{ (loading) && <Box sx={{width:"100%",zIndex:'3', position:'absolute', top: '0', left: '0', filter:'blur(20)',background:'rgba(0,0,0,.2)',height: '100vh', display:'flex', alignItems:'center', justifyContent: 'center'}}><CircularProgress  disableShrink  size="5rem" color="success" /></Box>}
 		<Dashboard />
+		<Widget/>
 		<Stack spacing={2}>
 		<Snackbar open={open.status} anchorOrigin={{vertical: 'top',horizontal:'center'}} autoHideDuration={6000} onClose={handleClose}>
 			<Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>

@@ -14,8 +14,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { showModal, recordRoute, showDialog, fetchReports } from "../../redux/slices/routeSlice";
 import ViewConfig from "../Reports/View";
 import NoContent from "./noContent";
-import { PopOver } from "../ui-components/PopOver";
-import { PopOverItem } from "../ui-components/PopOverItem";
 import ReportIssueModal from "../Reports/Issue";
 
 const style = {
@@ -149,7 +147,7 @@ const Dashboard = () => {
           background: '#fff',
           position: 'sticky',
           top: '0',
-          zIndex: '1'
+          zIndex: '1',
         }}>
 
           <Typography variant="reportDisplay" onClick={() => { window.location.href = "https://www.dentira.com" }} sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} component="div" ><img src="/dentira-logo.svg" width={150} alt="image" />Reports</Typography>
@@ -240,9 +238,6 @@ const Dashboard = () => {
             </Button>
           </DialogActions>
         </Dialog>
-        <PopOver label="What's New" title="New Features"  >
-          <PopOverItem title="Auto Pilot Mode" description="Auto pilot mode is our latest feature to trigger API without inital data provided"></PopOverItem>
-        </PopOver>
       </Box>
     </>
   )
