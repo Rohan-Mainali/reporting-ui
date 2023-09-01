@@ -2,6 +2,7 @@ import * as React from 'react';
 import Popover from '@mui/material/Popover';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import style from './styles/PopOver.module.css'
 import { Paper, styled } from "@mui/material";
 
 export function PopOver({ title, features, label, animation, children }) {
@@ -28,8 +29,8 @@ export function PopOver({ title, features, label, animation, children }) {
   //
   // }))
   return (
-    <div style={{ position: 'absolute', bottom: '5px', right: '16px' }}>
-      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+    <div style={{ position: 'absolute', bottom: '5px', right: '16px', maxHeight: '100px' }}>
+      <Button aria-describedby={id} variant="contained" onClick={handleClick} className={style.popover}>
         {label}
       </Button>
       <Popover
@@ -47,7 +48,7 @@ export function PopOver({ title, features, label, animation, children }) {
         }}
       >
         <div style={{ padding: '10px', background: '#00ad6f' }}>
-          <Typography sx={{ width: '200px', color: 'white', background: '#00ad6f' }}>{title}</Typography>
+          <Typography sx={{ maxWidth: '300px', color: 'white', background: '#00ad6f' }}>{title}</Typography>
         </div>
         <div style={{ padding: '10px' }}>
           <div className="children" style={{}}>

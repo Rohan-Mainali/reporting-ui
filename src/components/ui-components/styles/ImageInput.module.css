@@ -1,0 +1,32 @@
+ .parent {
+      margin: 0;
+      margin-top: 12px;
+      padding: 1.2rem;
+      background: #ffffff;
+      border-radius: 25px;
+      box-shadow: 2px 1px 10px rgb(210, 227, 244)
+    }
+    .fileUpload{
+      text-align: center;
+      border: 3px dashed rgb(210, 227, 244);
+      padding: 1.5rem;
+      position: relative;
+      cursor: pointer;
+    }
+    .fileUploadLabel {
+      font-size: 0.87rem;
+      margin-top: 10px;
+      color: #bbcada;
+    }
+    .fileUploadInput {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      cursor: pointer;
+    }

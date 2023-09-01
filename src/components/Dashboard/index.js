@@ -15,6 +15,8 @@ import { showModal, recordRoute, showDialog, fetchReports } from "../../redux/sl
 import ViewConfig from "../Reports/View";
 import NoContent from "./noContent";
 import { PopOver } from "../ui-components/PopOver";
+import { PopOverItem } from "../ui-components/PopOverItem";
+import ReportIssueModal from "../Reports/Issue";
 
 const style = {
   position: 'absolute',
@@ -85,6 +87,7 @@ const Dashboard = () => {
   const [show, setShow] = React.useState(false);
   const [reports, setReports] = React.useState(false);
   const [scheduledReports, setScheduledReports] = React.useState(false);
+  const [modalVisible, setModalVisible] = React.useState(true);
 
   const reportModal = (toggle) => { return { show: toggle, type: 'report' } }
   const handletChange = (event, newValue) => {
@@ -191,26 +194,30 @@ const Dashboard = () => {
           </TabPanel>
         </Box>
 
-        <Modal
-          open={modalShow.show}
-          onClose={() => dispatch(showModal({ show: false, type: "report" }))}
-          aria-labelledby="child-modal-title"
-          aria-describedby="child-modal-description"
-        >
-          <Box sx={(modalShow.type === 'report') ? { ...style } : { ...view_style }}>
-            <Paper sx={{ height: '75px' }}>
-              <Typography sx={{
-                fontSize: '18px', fontWeight: '500', p: '24px', boxShadow: 'inset 0px -0.5px 0px #CCCCCC',
-                borderRadius: '4px'
-              }} component="div">{(modalShow.type === 'report') ? 'Generate Or Schedule New Report' : 'Report Config'}</Typography>
-              <CloseIcon onClick={() => dispatch(showModal({ show: false, type: "report", report_type: "AD_HOC" }))} sx={{ position: 'absolute', right: '20px', top: '20px', cursor: 'pointer' }} />
-            </Paper>
-            {(modalShow.type === 'report') ?
-              <Report /> :
-              <ViewConfig data={modalShow.value} />
-            }
-          </Box>
-        </Modal>
+        {modalShow.show &&
+
+          <Modal
+            open={modalShow.show}
+            onClose={() => dispatch(showModal({ show: false, type: "report" }))}
+            aria-labelledby="child-modal-title"
+            aria-describedby="child-modal-description"
+          >
+            <Box sx={(modalShow.type === 'report') ? { ...style } : { ...view_style }}>
+              <Paper sx={{ height: '75px' }}>
+                <Typography sx={{
+                  fontSize: '18px', fontWeight: '500', p: '24px', boxShadow: 'inset 0px -0.5px 0px #CCCCCC',
+                  borderRadius: '4px'
+                }} component="div">{(modalShow.type === 'report') ? 'Generate Or Schedule New Report' : (modalShow.type === 'issue') ? 'Report an Issue' : 'Report Config'}</Typography>
+                <CloseIcon onClick={() => dispatch(showModal({ show: false, type: "report", report_type: "AD_HOC" }))} sx={{ position: 'absolute', right: '20px', top: '20px', cursor: 'pointer' }} />
+              </Paper>
+              {(modalShow.type === 'report') ?
+                <Report /> :
+                modalShow.type === 'issue' ? <ReportIssueModal data={modalShow.value} closeModal={() => { setModalVisible(false); dispatch(showModal({ show: false })) }} /> :
+                  <ViewConfig data={modalShow.value} />
+              }
+            </Box>
+          </Modal>
+        }
 
         <Dialog
           open={route.dialogShow}
@@ -234,9 +241,7 @@ const Dashboard = () => {
           </DialogActions>
         </Dialog>
         <PopOver label="What's New" title="New Features"  >
-          <h1>Test</h1>
-          <h1>Test</h1>
-          <h1>Test</h1>
+          <PopOverItem title="Auto Pilot Mode" description="Auto pilot mode is our latest feature to trigger API without inital data provided"></PopOverItem>
         </PopOver>
       </Box>
     </>
