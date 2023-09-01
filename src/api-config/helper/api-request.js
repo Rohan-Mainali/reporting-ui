@@ -91,7 +91,6 @@ export default function initApiRequest({
   withCredentials = false,
   market = 'en'
 }) {
-  console.log('path', pathVariables)
   if (Object.keys(pathVariables || {}).length) {
     apiDetails.url = Object.entries(pathVariables).reduce((acc, [key, value]) => {
       return acc.replace(`${key}`, value?.toString());
@@ -103,8 +102,6 @@ export default function initApiRequest({
   let headers = getRequestHeaders(apiDetails);
   headers = { ...headers, ...extraHeaders };
   const transformedRequestData = transformRequestData(apiDetails, requestData);
-
-  console.log('base', baseURL)
   let axiosReqParams = {
     baseURL,
     url: apiDetails.url,
@@ -166,8 +163,6 @@ export default function initApiRequest({
       if ((error?.response?.status) && error?.response.status === 401) {
         window.location.replace(redirect_url)
       }
-      console.log(error)
-
       return {
         ...manageErrorResponse(error.response || {}),
         isError: true,
